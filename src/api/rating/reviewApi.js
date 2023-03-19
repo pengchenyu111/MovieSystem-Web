@@ -8,7 +8,7 @@ import httpFetch from "@/api/httpFetch";
  * @param pageSize
  */
 export const queryByDoubanIdPage = (doubanId, pageNum, pageSize) => {
-  const url = `movieReviews/doubanId/${doubanId}/page/${pageNum}/${pageSize}`
+  const url = `movie_info/movieReviews/doubanId/${doubanId}/page/${pageNum}/${pageSize}`
   return httpFetch.get(url)
 }
 
@@ -19,7 +19,7 @@ export const queryByDoubanIdPage = (doubanId, pageNum, pageSize) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const reviewAgree = (reviewId) => {
-  const url = `movieReviews/agree/${reviewId}`
+  const url = `movie_info/movieReviews/agree/${reviewId}`
   return httpFetch.get(url)
 }
 
@@ -30,7 +30,7 @@ export const reviewAgree = (reviewId) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const review = (request) => {
-  const url = 'movieReviews'
+  const url = 'movie_info/movieReviews'
   return httpFetch.post(url, request)
 }
 
@@ -43,7 +43,7 @@ export const review = (request) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryUserReviews = (userId, pageNum, pageSize) => {
-  const url = `movieReviews/userHistoryReviews/${userId}/page/${pageNum}/${pageSize}`
+  const url = `movie_info/movieReviews/userHistoryReviews/${userId}/page/${pageNum}/${pageSize}`
   return httpFetch.get(url)
 }
 

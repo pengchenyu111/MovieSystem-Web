@@ -5,7 +5,7 @@ import httpFetch from "@/api/httpFetch";
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryHistoryTop20 = () => {
-  const url = `historyTop20`
+  const url = `recommend/rec_res/historyTop20`
   return httpFetch.get(url)
 }
 
@@ -14,7 +14,7 @@ export const queryHistoryTop20 = () => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryRecentlyTop20 = () => {
-  const url = `recentlyTop20`
+  const url = `recommend/rec_res/recentlyTop20`
   return httpFetch.get(url)
 }
 
@@ -23,7 +23,7 @@ export const queryRecentlyTop20 = () => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryALSUserRecs = (userId) => {
-  const url = `alsUserRecs/${userId}`
+  const url = `recommend/rec_res/alsUserRecs/${userId}`
   return httpFetch.get(url)
 }
 
@@ -32,7 +32,7 @@ export const queryALSUserRecs = (userId) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryStreamRatingRecs = (userId) => {
-  const url = `ratingRecs/${userId}`
+  const url = `recommend/rec_res/ratingRecs/${userId}`
   return httpFetch.get(url)
 }
 
@@ -41,7 +41,7 @@ export const queryStreamRatingRecs = (userId) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryUserPreferGenreRecs = (userId) => {
-  const url = `userPreferGenreTop10/${userId}`
+  const url = `recommend/rec_res/userPreferGenreTop10/${userId}`
   return httpFetch.get(url)
 }
 
@@ -50,7 +50,7 @@ export const queryUserPreferGenreRecs = (userId) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryPerTagRecs = (genre) => {
-  const url = 'genreTop10'
+  const url = 'recommend/rec_res/genreTop10'
   return httpFetch.post(url,{genre: genre})
 }
 
@@ -59,7 +59,7 @@ export const queryPerTagRecs = (genre) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryContentRecs = (doubanId) => {
-  const url = `content/${doubanId}`
+  const url = `recommend/rec_res/content/${doubanId}`
   return httpFetch.get(url)
 }
 
@@ -68,6 +68,6 @@ export const queryContentRecs = (doubanId) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryItemCFRecs = (doubanId) => {
-  const url = `itemCFRecs/${doubanId}`
+  const url = `recommend/rec_res/itemCFRecs/${doubanId}`
   return httpFetch.get(url)
 }
