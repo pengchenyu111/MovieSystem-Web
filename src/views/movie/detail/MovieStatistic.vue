@@ -420,7 +420,7 @@ export default {
         series: [{
           // current data
           type: 'pictorialBar',
-          symbol: 'image://http://81.70.252.155:8000/movierecommendation/icon/people.png',
+          symbol: 'image://http://192.168.10.181:8000/movierecommendation/icon/people.png',
           symbolRepeat: 'fixed',
           symbolMargin: '5%',
           symbolClip: true,

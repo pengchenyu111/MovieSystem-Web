@@ -9,8 +9,8 @@ import httpFetch from "@/api/httpFetch";
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const searchMovie = (pageNum, pageSize, keyword) => {
-  const url = `movieDetail/search/${pageNum}/${pageSize}`
-  return httpFetch.post(url, {keyword: keyword})
+  const url = `search/search_movie/input_search/${pageNum}/${pageSize}/keyword/${keyword}`
+  return httpFetch.get(url)
 }
 
 /**
@@ -20,7 +20,7 @@ export const searchMovie = (pageNum, pageSize, keyword) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const searchByTags = (searchRequest) => {
-  const url = 'movieDetail/searchByTags'
+  const url = 'search/search_movie/searchByTags'
   return httpFetch.post(url, searchRequest)
 }
 
@@ -32,6 +32,6 @@ export const searchByTags = (searchRequest) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const searchByDoubanId = (doubanId) => {
-  const url = `movieDetail/${doubanId}`
+  const url = `movie_info/movieDetail/${doubanId}`
   return httpFetch.get(url)
 }

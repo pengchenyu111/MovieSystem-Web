@@ -6,12 +6,12 @@ import httpFetch from "@/api/httpFetch";
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryUserTagPreferById = (userId) => {
-  const url = `tagPrefer/${userId}`
+  const url = `uaa/tagPrefer/${userId}`
   return httpFetch.get(url)
 }
 
 export const queryUserTagPreferDetailById = (userId) => {
-  const url = `tagPrefer/detail/${userId}`
+  const url = `uaa/tagPrefer/detail/${userId}`
   return httpFetch.get(url)
 }
 
@@ -19,7 +19,7 @@ export const queryUserTagPreferDetailById = (userId) => {
  * 新增一个
  */
 export const addUserTagPrefer = (request) => {
-  const url = 'tagPrefer'
+  const url = 'uaa/tagPrefer'
   return httpFetch.post(url, request)
 
 }
@@ -29,6 +29,6 @@ export const addUserTagPrefer = (request) => {
  */
 export const updateUserTagPrefer = (request) => {
   const userId = request.userId
-  const url = `tagPrefer/${userId}`
+  const url = `uaa/tagPrefer/${userId}`
   return httpFetch.put(url, request)
 }

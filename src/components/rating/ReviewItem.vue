@@ -27,9 +27,9 @@
 
         <div style="margin-top: 10px">
           <span>
-            <img src="http://81.70.252.155:8000/movierecommendation/icon/agree.png" v-if="!isAgreeActive" @click="agree"
+            <img src="http://192.168.10.181:8000/movierecommendation/icon/agree.png" v-if="!isAgreeActive" @click="agree"
                  style="cursor: pointer">
-            <img src="http://81.70.252.155:8000/movierecommendation/icon/agree_active.png" v-if="isAgreeActive">
+            <img src="http://192.168.10.181:8000/movierecommendation/icon/agree_active.png" v-if="isAgreeActive">
           </span>
           <span style="margin-left: 3px; color: #FFFFFF">{{ totalAgree }}</span>
           <span style="float: right; color: #9e9e9e">{{ movieReview.userMovieRatingTime }}</span>

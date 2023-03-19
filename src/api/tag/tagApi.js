@@ -5,6 +5,6 @@ import httpFetch from "@/api/httpFetch";
  * @returns {Promise<AxiosResponse<any>>}
  */
 export const queryAllTags = () => {
-  const url = `movieTag`
+  const url = `movie_info/movieTag`
   return httpFetch.get(url)
 }
